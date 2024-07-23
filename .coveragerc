@@ -1,6 +1,8 @@
 [run]
+branch = True
 source = .
 
+[report]
 omit = 
     */__init__.py
     */settings.py
