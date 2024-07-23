@@ -1,0 +1,40 @@
+{% load static %}
+
+
+<section id="team" class="section-padding bg-gray">
+    <div class="container">
+      <div class="section-header text-center">          
+        <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Meet our team</h2>
+        <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-xs-12">
+          <!-- Team Item Starts -->
+          {% for member in team %}
+            <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
+              <div class="team-img">
+                <img class="img-fluid" src="{{ member.image.thumb.url }}" alt="">
+              </div>
+              <div class="content">
+                <div class="info-text">
+                  <h3><a href="#">{{ member.name }}</a></h3>
+                  <p>{{ member.position }}</p>
+                </div>
+                <p>{{ member.bio }}</p>
+                <ul class="social-icons">
+                  <li><a href="{{ member.facebook }}"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
+                  <li><a href="{{ member.twitter }}"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
+                  <li><a href="{{ member.instagram }}"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+        </div>
+        <div class="col-lg-6 col-md-12 col-xs-12">
+        {% endfor %}
+        
+          
+        </div>
+      </div>
+    </div>
+    </section>
